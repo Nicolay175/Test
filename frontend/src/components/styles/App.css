@@ -1,0 +1,25 @@
+.box {
+    background-Repeat: no-repeat;
+    background-Position: center;
+    background-size: cover;
+    overflow: auto;
+    margin-Top: 2px;
+    height: 80vh;
+}
+
+.box_text {
+    position: relative;
+    overflow: auto;
+    margin-Top: 2px;
+    height: 80vh;
+}
+
+.button {
+    float: right;
+    margin-top: 6px;
+}
+
+.cote {
+    float: left;
+    margin-right: 10px;
+}
