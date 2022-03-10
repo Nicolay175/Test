@@ -8,7 +8,7 @@ const Footer = () => {
             sx={{
                 width: 'cover',
                 height: 40,
-                backgroundColor: 'inherit'
+                backgroundColor: 'primary.main'
             }}
         >
             <Typography

@@ -89,13 +89,13 @@ class ClientController extends Controller
             $Clients->save();
 
             return response()->json([
-                'message'=>'Clients Updated Successfully!!'
+                'message'=>'Изменения Clients успешно записаны!!'
             ]);
 
         }catch(\Exception $e){
             \Log::error($e->getMessage());
             return response()->json([
-                'message'=>'Something goes wrong while updating a Clients!!'
+                'message'=>'Ошибка при изменении Сlients на сервере!!'
             ],500);
         }
     }
@@ -112,13 +112,13 @@ class ClientController extends Controller
             $client->delete();
 
             return response()->json([
-                'message'=>'Clients Deleted Successfully!!'
+                'message'=>'Client успешно грохнут!!'
             ]);
 
         } catch (\Exception $e) {
             \Log::error($e->getMessage());
             return response()->json([
-                'message'=>'Something goes wrong while deleting a Clients!!'
+                'message'=>'Ошибочка при удалении Client на стороне сервера!!'
             ]);
         }
     }

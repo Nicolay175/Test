@@ -20,6 +20,8 @@ class CreateClientsTable extends Migration
             $table->date('date');
             $table->string('email');
             $table->string('phone');
+            $table->boolean('consentRules');
+            $table->boolean('consentMailing');
             $table->timestamps();
         });
     }

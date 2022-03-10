@@ -1,5 +1,9 @@
 import React from 'react';
-import {AppBar, Box, Button, colors, Toolbar, Typography} from "@mui/material";
+import Box from "@mui/material/Box";
+import AppBar from "@mui/material/AppBar";
+import Button from "@mui/material/Button";
+import Toolbar from "@mui/material/Toolbar";
+import Typography from "@mui/material/Typography";
 
 const HeaderBar = () => {
     return (

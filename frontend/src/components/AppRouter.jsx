@@ -2,7 +2,7 @@ import React from 'react';
 import {Route, Routes} from "react-router-dom";
 import About from "./pages/About";
 import Start from "./pages/Start";
-import FormCreate from "./pages/FormCreate";
+import FormClient from "./pages/FormClient";
 import FormList from "./pages/FormList";
 
 const AppRouter = () => {
@@ -13,12 +13,16 @@ const AppRouter = () => {
                 element={<About/>}
             >
             </Route>
-
-            <Route
-                path="/clients/create"
-                element={<FormCreate/>}
-            >
-            </Route>
+                <Route
+                    path="/clients/client"
+                    element={<FormClient/>}
+                >
+                </Route>
+                <Route
+                    path="/client/:id"
+                    element={<FormClient/>}
+                >
+                </Route>
             <Route
                 path="/list"
                 element={<FormList/>}

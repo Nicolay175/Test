@@ -5,7 +5,7 @@ import '../styles/App.css'
 
 const About = () => {
     return (
-        <Box className='box_text'>
+        <Box className='box_text' sx={{backgroundColor: 'secondary.main'}}>
             <Typography variant={"h5"} align='center'>Это усе о нас</Typography>
             <img width="400" height="500" className='cote' alt="Коте" src='Cote.jpg'/>
             <Typography >
