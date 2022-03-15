@@ -14,6 +14,7 @@ import FormRules from "./FormRules";
 import {useNavigate, useParams} from "react-router-dom";
 import axios from 'axios';
 import Swal from 'sweetalert2';
+import ReactPhoneInput from 'react-phone-input-material-ui'
 
 
 const FormClient = () => {
@@ -141,13 +142,12 @@ const FormClient = () => {
                         type="date"
                         margin="normal"
                         fullWidth
-                        sx={{mr:2}}
                         value={date}
                         onChange={(event)=>{setDate(event.target.value)}}
                     />
                     <TextField
                         required
-                        sx={{mr:2}}
+                        sx={{marginBottom:2}}
                         label="Email"
                         margin="normal"
                         type="email"
@@ -155,15 +155,12 @@ const FormClient = () => {
                         value={email}
                         onChange={(event)=>{setEmail(event.target.value)}}
                     />
-                    <TextField
-                        required
-                        sx={{mr:2}}
+                    <ReactPhoneInput
+                        country='ru'
                         label="Телефон"
-                        type='tel'
-                        margin="normal"
-                        fullWidth
                         value={phone}
-                        onChange={(event)=>{setPhone(event.target.value)}}
+                        onChange={phone => {setPhone(phone)}}
+                        component={TextField}
                     />
 
                     <FormControlLabel style={{marginTop: 2}} control={
@@ -185,7 +182,6 @@ const FormClient = () => {
                     />
                     <FormRules open={open} handleClose={handleClose}/>
 
-
                     <Button className="button"
                         sx={{marginLeft: 2}}
                         variant="contained"
@@ -199,7 +195,6 @@ const FormClient = () => {
                     >
                         Отмена
                     </Button>
-
                 </form>
             </Container>
         </Box>
