@@ -41,13 +41,13 @@ class ClientController extends Controller
             Client::create($request->post());
 
             return response()->json([
-                'message'=>'Clients успешно записан!!'
+                'message'=>'Client успешно записан!!'
             ]);
         }catch(\Exception $e){
 
             \Log::error($e->getMessage());
             return response()->json([
-                'message'=>'Ошибка при записи Clients!!'
+                'message'=>'Ошибка при записи Client!!'
             ],500);
         }
     }
@@ -55,13 +55,13 @@ class ClientController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  \App\Models\Client  $Clients
+     * @param  \App\Models\Client  $client
      * @return \Illuminate\Http\Response
      */
-    public function show(Client $Clients)
+    public function show(Client $client)
     {
         return response()->json([
-            'Clients'=>$Clients
+            'client'=>$client
         ]);
     }
 
@@ -69,10 +69,10 @@ class ClientController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Models\Client  $Clients
+     * @param  \App\Models\Client  $client
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Client $Clients)
+    public function update(Request $request, Client $client)
     {
         $request->validate([
             'login'=>'required',
@@ -81,21 +81,20 @@ class ClientController extends Controller
             'phone'=>'required',
             'email'=>'required',
         ]);
-
         try{
 
-            $Clients->fill($request->post())->update();
+            $client->fill($request->post())->update();
 
-            $Clients->save();
+            $client->save();
 
             return response()->json([
-                'message'=>'Изменения Clients успешно записаны!!'
+                'message'=>'Изменения Client успешно записаны!!'
             ]);
 
         }catch(\Exception $e){
             \Log::error($e->getMessage());
             return response()->json([
-                'message'=>'Ошибка при изменении Сlients на сервере!!'
+                'message'=>'Ошибка при изменении Сlient на сервере!!'
             ],500);
         }
     }

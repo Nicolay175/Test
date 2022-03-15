@@ -14,7 +14,7 @@ const AppRouter = () => {
             >
             </Route>
                 <Route
-                    path="/clients/client"
+                    path="/client"
                     element={<FormClient/>}
                 >
                 </Route>

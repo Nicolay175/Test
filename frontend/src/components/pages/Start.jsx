@@ -1,6 +1,6 @@
 import React from "react";
 import Box from "@mui/material/Box";
-import '../styles/App.css'
+import '../../styles/App.css'
 
 
 function Start() {

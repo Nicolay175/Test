@@ -62,14 +62,13 @@ const FormList = () => {
             <Container maxWidth='md'>
                 <TableContainer >
                     <Typography variant={"h5"} align='center' sx={{m:5}}>Информация о пользователях</Typography>
-                    <Button sx={{float: "right",  marginRight: 9}} variant="outlined" href="/clients/client">Новая запись</Button>
+                    <Button sx={{float: "right",  marginRight: 9}} variant="outlined" href="/client">Новая запись</Button>
                     <Table >
                         <TableHead>
                             <TableRow >
                                 <TableCell>Login</TableCell>
                                 <TableCell>Email</TableCell>
                                 <TableCell>Телефон</TableCell>
-                                <TableCell>Id</TableCell>
                                 <TableCell align="center">Действия</TableCell>
                             </TableRow>
                         </TableHead>
@@ -81,9 +80,8 @@ const FormList = () => {
                                             <TableCell>{row.login}</TableCell>
                                             <TableCell>{row.email}</TableCell>
                                             <TableCell>{row.phone}</TableCell>
-                                            <TableCell>{row.id}</TableCell>
                                             <TableCell align="center">
-                                                <Button sx={{marginRight: 1}} variant="outlined" href="/client/${row.id}">Изменить</Button>
+                                                <Button sx={{marginRight: 1}} variant="outlined" href={`/client/${row.id}`}>Изменить</Button>
                                                 <Button color="warning" variant="outlined" onClick={()=>deleteClient(row.id)}>Удалить</Button>
                                             </TableCell>
                                         </TableRow>
