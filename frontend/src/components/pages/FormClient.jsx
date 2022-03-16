@@ -74,7 +74,6 @@ const FormClient = () => {
         setOpen(false);
     }
 
-
     const createClient = async (e) => {
         e.preventDefault();
 
