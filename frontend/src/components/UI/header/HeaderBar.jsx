@@ -45,7 +45,7 @@ const HeaderBar = () => {
                     >
                         <MenuItem onClick={handleClose}>Домой</MenuItem>
                         <MenuItem href="/about">О нас</MenuItem>
-                        <MenuItem onClick={handleClose}>Список</MenuItem>
+                        <MenuItem href="/list">Список</MenuItem>
                     </Menu>
 
                     <Typography variant="h6" sx={{ flexGrow: 1 }}>
