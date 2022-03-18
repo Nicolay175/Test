@@ -8,6 +8,7 @@ import IconButton from '@mui/material/IconButton';
 import MenuIcon from '@mui/icons-material/Menu';
 import Menu from "@mui/material/Menu";
 import MenuItem from "@mui/material/MenuItem";
+import '../../../styles/App.css'
 
 const HeaderBar = () => {
     const [anchorEl, setAnchorEl] = React.useState(null);
@@ -51,9 +52,9 @@ const HeaderBar = () => {
                     <Typography variant="h6" sx={{ flexGrow: 1 }}>
                         Рога и копыта корпорейшн
                     </Typography>
-                    <Button color="inherit" href="/home">Домой</Button>
-                    <Button color="inherit" href="/about">О нас</Button>
-                    <Button color="inherit" href="/list">Список</Button>
+                    <Button className='isMobile' color="inherit" href="/home">Домой</Button>
+                    <Button className='isMobile' color="inherit" href="/about">О нас</Button>
+                    <Button className='isMobile' color="inherit" href="/list" sx={{marginRight:2}}>Список</Button>
                 </Toolbar>
             </AppBar>
         </Box>

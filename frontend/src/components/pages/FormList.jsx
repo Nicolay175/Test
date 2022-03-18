@@ -68,7 +68,7 @@ const FormList = () => {
                             <TableRow >
                                 <TableCell>Login</TableCell>
                                 <TableCell>Email</TableCell>
-                                <TableCell>Телефон</TableCell>
+                                <TableCell className="isMobile">Телефон</TableCell>
                                 <TableCell align="center">Действия</TableCell>
                             </TableRow>
                         </TableHead>
@@ -79,7 +79,7 @@ const FormList = () => {
                                         <TableRow key={key}>
                                             <TableCell>{row.login}</TableCell>
                                             <TableCell>{row.email}</TableCell>
-                                            <TableCell>{row.phone}</TableCell>
+                                            <TableCell className="isMobile">{row.phone}</TableCell>
                                             <TableCell align="center">
                                                 <Button sx={{marginRight: 1}} variant="outlined" href={`/client/${row.id}`}>Изменить</Button>
                                                 <Button color="warning" variant="outlined" onClick={()=>deleteClient(row.id)}>Удалить</Button>

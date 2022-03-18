@@ -1,13 +1,13 @@
 import React from 'react';
 import Box from "@mui/material/Box";
 import Typography from "@mui/material/Typography";
-import '../../styles/App.css'
+import Cote from '../../img/Cote.jpg'
 
 const About = () => {
     return (
         <Box className='box_text' sx={{backgroundColor: 'secondary.main'}}>
             <Typography variant={"h5"} align='center'>Это усе о нас</Typography>
-            <img width="400" height="500" className='cote' alt="Коте" src='Cote.jpg'/>
+            <img width="400" height="500" className='cote' alt="Коте" src={Cote}/>
             <Typography >
                 <p>Повседневная практика показывает, что укрепление и развитие структуры играет важную роль в формировании дальнейших направлений развития. Не следует, однако забывать, что сложившаяся структура организации в значительной степени обуславливает создание направлений прогрессивного развития. Задача организации, в особенности же новая модель организационной деятельности в значительной степени обуславливает создание новых предложений.</p>
 

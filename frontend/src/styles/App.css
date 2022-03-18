@@ -25,3 +25,10 @@
     float: left;
     margin-right: 10px;
 }
+
+@media (max-width: 786px) {
+    .isMobile {
+        display: none !important;
+    }
+}
+
