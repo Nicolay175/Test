@@ -8,7 +8,7 @@ import IconButton from '@mui/material/IconButton';
 import MenuIcon from '@mui/icons-material/Menu';
 import Menu from "@mui/material/Menu";
 import MenuItem from "@mui/material/MenuItem";
-import '../../../styles/App.css'
+import '../../../styles/App.css';
 
 const HeaderBar = () => {
     const [anchorEl, setAnchorEl] = React.useState(null);
@@ -44,9 +44,9 @@ const HeaderBar = () => {
                             'aria-labelledby': 'basic-button'
                         }}
                     >
-                        <MenuItem onClick={handleClose}>Домой</MenuItem>
-                        <MenuItem href="/about">О нас</MenuItem>
-                        <MenuItem onClick={handleClose}>Список</MenuItem>
+                        <MenuItem onClick={handleClose}><a href="/home">Домой</a></MenuItem>
+                        <MenuItem onClick={handleClose}><a href="/about">О нас</a></MenuItem>
+                        <MenuItem onClick={handleClose}><a href="/list">Список</a></MenuItem>
                     </Menu>
 
                     <Typography variant="h6" sx={{ flexGrow: 1 }}>

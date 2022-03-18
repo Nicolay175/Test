@@ -67,7 +67,7 @@ const FormList = () => {
                         <TableHead>
                             <TableRow >
                                 <TableCell>Login</TableCell>
-                                <TableCell>Email</TableCell>
+                                <TableCell className="isMobile">Email</TableCell>
                                 <TableCell className="isMobile">Телефон</TableCell>
                                 <TableCell align="center">Действия</TableCell>
                             </TableRow>
@@ -78,7 +78,7 @@ const FormList = () => {
                                     clients.map((row, key)=>(
                                         <TableRow key={key}>
                                             <TableCell>{row.login}</TableCell>
-                                            <TableCell>{row.email}</TableCell>
+                                            <TableCell className="isMobile">{row.email}</TableCell>
                                             <TableCell className="isMobile">{row.phone}</TableCell>
                                             <TableCell align="center">
                                                 <Button sx={{marginRight: 1}} variant="outlined" href={`/client/${row.id}`}>Изменить</Button>
